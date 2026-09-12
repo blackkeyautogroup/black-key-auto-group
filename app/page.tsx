@@ -147,7 +147,7 @@ className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain
               BLACK KEY AUTO GROUP
             </p>
 
-            <h1 className="text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-bold leading-[1.02] sm:text-6xl lg:text-7xl">
               FIND THE CAR.
               <br />
 

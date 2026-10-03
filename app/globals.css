@@ -58,3 +58,22 @@ body {
   opacity: 0;
   animation: sloganEnter 0.9s ease-out 1.1s forwards;
 }
+html {
+  scroll-behavior: smooth;
+}
+@keyframes socialEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-enter {
+  opacity: 0;
+  animation: socialEnter 0.9s ease-out 0.4s forwards;
+}

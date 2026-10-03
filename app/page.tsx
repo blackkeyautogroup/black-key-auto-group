@@ -62,22 +62,23 @@ const goHome = () => {
 
       {/* HEADER */}
       <header className="absolute left-0 top-0 z-50 w-full">
-       <div className="mx-auto grid max-w-[1400px] grid-cols-[180px_1fr_180px] items-center px-8 py-3">
+     <div className="mx-auto grid max-w-[1400px] grid-cols-[180px_1fr_180px] items-center px-3 py-3 sm:px-8">
 
           {/* LOGO */}
-          <Link href="/">
+          <Link href="/" className="absolute left-0 top-3 sm:static">
             <Image
               src="/black-key-logo.png"
               alt="Black Key Auto Group"
               width={190}
               height={100}
-              className="h-auto w-[220px] object-contain"
+             className="relative -left-3 h-auto w-[160px] object-contain sm:left-0 sm:w-[220px]"
               priority
             />
           </Link>
 
           {/* MENU */}
-          <nav className="hidden items-center gap-10 justify-self-center text-xs tracking-[0.15em] text-white/80 lg:flex">
+      <nav className="absolute left-[34%] top-12 flex items-center gap-4 text-[10px] tracking-[0.12em] text-white/80 sm:static sm:justify-self-center sm:gap-6 sm:text-xs lg:gap-10">
+           
            <button
   type="button"
   onClick={goHome}
@@ -103,6 +104,33 @@ const goHome = () => {
 </button>
           </nav>
 
+          {/* Social Media Links */}
+<div className="social-enter absolute right-6 top-[85px] z-50 text-center sm:right-8 sm:top-8">
+  <p className="mb-3 text-[11px] tracking-[0.22em] text-white/60">
+    VISIT OUR SOCIAL MEDIAS
+  </p>
+
+  <div className="flex items-center justify-center gap-3">
+    <a
+      href="https://www.instagram.com/blackkey_autogroup/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border border-[#d4af55] px-4 py-2 text-xs tracking-[0.15em] text-[#d4af55] transition hover:bg-[#d4af55] hover:text-black"
+    >
+      INSTAGRAM
+    </a>
+
+    <a
+      href="https://www.facebook.com/share/18szq2aYQL/?mibextid=wwXIfr"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border border-[#d4af55] px-4 py-2 text-xs tracking-[0.15em] text-[#d4af55] transition hover:bg-[#d4af55] hover:text-black"
+    >
+      FACEBOOK
+    </a>
+  </div>
+</div>
+
            <div />
 
         </div>
@@ -113,7 +141,7 @@ const goHome = () => {
         {/* HERO CAR */}
 
 {/* CAR BACKGROUND GLOW */}
-<div className="absolute right-[2%] top-[48%] z-[1] h-[430px] w-[55%] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(212,175,85,0.16)_0%,rgba(80,55,20,0.08)_40%,transparent_72%)] blur-2xl" />
+<div className="absolute right-[-10%] top-[56%] z-[1] h-[300px] w-[70%] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(212,175,85,0.14)_0%,rgba(80,55,20,0.06)_45%,transparent_75%)] blur-2xl sm:right-[2%] sm:top-[48%] sm:h-[430px] sm:w-[55%]" />
 
 {/* CAR FLOOR SHADOW */}
 <div className="absolute bottom-[115px] right-[5%] z-[1] h-[70px] w-[48%] rounded-[100%] bg-black/80 blur-3xl" />
@@ -123,14 +151,14 @@ const goHome = () => {
   alt="Black luxury sports car"
   width={900}
   height={600}
-className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain drop-shadow-[0_30px_45px_rgba(0,0,0,0.95)]"
+className="car-enter absolute right-[-2%] top-[59%] z-[2] w-[56%] object-contain drop-shadow-[0_30px_45px_rgba(0,0,0,0.95)] sm:right-[-2%] sm:top-[53%] sm:w-[54%]"
   priority
 />
 
 {/* CAR SLOGAN */}
-<div className="car-slogan absolute right-[4%] top-[79%] z-[4] w-[50%] text-center">
-  <p className="text-sm font-medium tracking-[0.32em] text-[#d4af55]">
-    EVERY COLORFUL CAR COMES WITH A BLACK KEY AUTO GROUP
+<div className="car-slogan absolute right-[10%] top-[68%] z-[4] w-[55%] text-center sm:right-[4%] sm:top-[79%] sm:w-[50%]">
+  <p className="whitespace-nowrap text-[8px] font-medium tracking-[0.16em] text-[#d4af55] sm:text-sm sm:tracking-[0.32em]">
+    EVERY COLORFUL CAR COMES WITH A BLACK KEY
   </p>
 </div>
 
@@ -159,15 +187,15 @@ className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain
               THE REST.
             </h1>
 
-            <p className="mt-7 max-w-[540px] text-lg leading-8 text-white/60">
+            <p className="mt-10 w-[44%] text-[14px] leading-6 text-white/60 sm:mt-6 sm:w-auto sm:max-w-[620px] sm:text-lg sm:leading-8">
               Premium vehicles. Personalized service. Find the car you want
-              and let Black Key Autotake care of the rest.
+              and let Black Key Auto Group take care of the rest.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
 
               <Link
-  href="/inventory"
+  href="/find-your-car"
   className="bg-[#d4af55] px-7 py-4 text-sm font-bold tracking-wide text-black transition hover:bg-[#edc96b]"
 >
   FIND YOUR CAR
@@ -307,7 +335,16 @@ className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain
       </div>
 
       <div className="border border-white/10 p-8 transition duration-300 hover:-translate-y-2 hover:border-[#d4af55]/60">
-        <p className="mb-5 text-4xl text-[#d4af55]">✉</p>
+        <svg
+  viewBox="0 0 24 24"
+  className="mb-5 h-10 w-10 text-[#d4af55]"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="1.8"
+>
+  <rect x="3" y="5" width="18" height="14" rx="2" />
+  <path d="M3 7l9 6 9-6" />
+</svg>
         <h3 className="mb-3 text-xl font-bold">REQUEST</h3>
         <p className="leading-7 text-white/55">
           Send us your vehicle request with your contact details and budget.
@@ -388,9 +425,9 @@ className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain
         GET IN TOUCH
       </p>
 
-      <h2 className="mb-12 text-4xl font-bold sm:text-5xl">
-        CONTACT BLACK KEY AUTO GROUP
-      </h2>
+     <h2 className="mb-10 text-3xl font-bold leading-tight sm:text-5xl">
+  CONTACT BLACK KEY AUTO GROUP
+</h2>
 
     <div className="mx-auto grid max-w-[900px] gap-6 md:grid-cols-2">
 
@@ -399,9 +436,9 @@ className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain
       PHONE
     </p>
 
-    <p className="text-xl font-semibold">
-      +1 (661) 636-3333
-    </p>
+   <p className="text-lg font-semibold sm:text-xl">
+  +1 (661) 636-3333
+</p>
   </div>
 
   <div className="border border-white/10 p-8 transition duration-300 hover:-translate-y-2 hover:border-[#d4af55]/60">
@@ -409,9 +446,9 @@ className="car-enter absolute right-[-2%] top-[53%] z-[2] w-[54%] object-contain
       EMAIL
     </p>
 
-    <p className="text-xl font-semibold">
-      blackkeyautogroup33@gmail.com
-    </p>
+   <p className="break-all text-base font-semibold sm:text-xl">
+  blackkeyautogroup33@gmail.com
+</p>
   </div>
 
 </div>
